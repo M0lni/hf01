@@ -18,10 +18,14 @@ rl.question('What do you think of Node.js? ', (answer) => {
   rl.close();
 }); */
 
-function koszones(emberek){
-    if(emberek=="")
+ function koszones(emberek){
+    if(emberek==""){
     return "Hello, my friend";
+    }
+    
+
 }
+module.exports = koszones;
 
 
 
