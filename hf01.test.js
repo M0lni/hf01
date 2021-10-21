@@ -17,3 +17,6 @@ test('Tests for 1 input', () => {
 test('Tests for shouting', () => {
     expect(koszones("BOB")).toBe("HELLO, BOB!");
   });
+test('Tests for multiple names', () => {
+    expect(koszones("Sam, Dave, Bob")).toBe("Hello, Sam, Dave and Bob");
+  });
