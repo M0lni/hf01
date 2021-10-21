@@ -13,3 +13,7 @@ test('Tests for no input', () => {
 test('Tests for 1 input', () => {
     expect(koszones("Fred")).toBe("Hello, Fred");
   });
+
+test('Tests for shouting', () => {
+    expect(koszones("BOB")).toBe("HELLO, BOB!");
+  });
