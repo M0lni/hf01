@@ -22,7 +22,9 @@ rl.question('What do you think of Node.js? ', (answer) => {
     if(emberek==""){
     return "Hello, my friend";
     }
-
+    if(emberek==emberek.toUpperCase()){
+        return "HELLO, "+emberek+"!";
+    }
 
     return "Hello, "+emberek;
     
