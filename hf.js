@@ -35,17 +35,15 @@ rl.question('What do you think of Node.js? ', (answer) => {
     }
     if(darabolt.length>1 &&  feltetel>0) {
         
-        let kis="";
-        let nagy="";
+        let kis=[];
+        let nagy=[];
         let i=0;
         let j=0;
         let index;
-        let indexb;
-        let indexc;
         let kisreturn="";
         let nagyreturn="";
         for ( index = 0; index < darabolt.length; index++) {
-            if(darabolt[index]===darabolt[index].toUpperCase()){
+            if(darabolt[index]==darabolt[index].toUpperCase()){
                 nagy[i]=darabolt[index];
                 i++;
             }
@@ -54,15 +52,15 @@ rl.question('What do you think of Node.js? ', (answer) => {
                 j++;
             }
         }
-        for ( indexb = 0; indexb < kis.length-1; indexb++) {
-            kisreturn+=", "+kis[indexb];
+        for ( index = 0; index < kis.length-1; index++) {
+            kisreturn+=", "+kis[index];
            
        }
-       for ( indexc = 0; indexc < nagy.length-1; indexc++) {
-        nagyreturn+=", "+nagy[indexc];
+       for ( index = 0; index < nagy.length-1; index++) {
+        nagyreturn+=", "+nagy[index];
        
    }
-        return "Hello"+kisreturn+"and "+kis[j]+". AND HELLO"+nagyreturn+"AND"+nagy[i]+"!"
+        return "Hello"+kisreturn+" and "+kis[kis.length-1]+". AND HELLO"+nagyreturn+" AND "+nagy[nagy.length-1]+"!"
     }
     if(darabolt.length>1){
         let returnstring="";
