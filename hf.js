@@ -23,10 +23,46 @@ rl.question('What do you think of Node.js? ', (answer) => {
  function koszones(emberek){
     let darabolt=emberek.split(", ");
     if(emberek==""){
-    return "Hello, my friend";
+    return "Hello, my friend.";
     }
     if(emberek==emberek.toUpperCase()){
     return "HELLO, "+emberek+"!";
+    }
+    let feltetel=0;
+    for(let k=0;k<darabolt.length;k++){
+        if(darabolt[k]==darabolt[k].toUpperCase())
+        feltetel++;
+    }
+    if(darabolt.length>1 &&  feltetel>0) {
+        
+        let kis="";
+        let nagy="";
+        let i=0;
+        let j=0;
+        let index;
+        let indexb;
+        let indexc;
+        let kisreturn="";
+        let nagyreturn="";
+        for ( index = 0; index < darabolt.length; index++) {
+            if(darabolt[index]===darabolt[index].toUpperCase()){
+                nagy[i]=darabolt[index];
+                i++;
+            }
+            else{
+                kis[j]=darabolt[index];
+                j++;
+            }
+        }
+        for ( indexb = 0; indexb < kis.length-1; indexb++) {
+            kisreturn+=", "+kis[indexb];
+           
+       }
+       for ( indexc = 0; indexc < nagy.length-1; indexc++) {
+        nagyreturn+=", "+nagy[indexc];
+       
+   }
+        return "Hello"+kisreturn+"and "+kis[j]+". AND HELLO"+nagyreturn+"AND"+nagy[i]+"!"
     }
     if(darabolt.length>1){
         let returnstring="";
@@ -35,10 +71,10 @@ rl.question('What do you think of Node.js? ', (answer) => {
              returnstring+=", "+darabolt[index];
             
         }
-    return "Hello"+returnstring+" and "+darabolt[index];
+    return "Hello"+returnstring+" and "+darabolt[index]+".";
     }
 
-    return "Hello, "+emberek;
+    return "Hello, "+emberek+".";
     
 
 }

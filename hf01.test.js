@@ -21,5 +21,5 @@ test('Tests for multiple names', () => {
     expect(koszones("Sam, Dave, Bob")).toBe("Hello, Sam, Dave and Bob.");
   });
   test('Tests for multiple names that can be uppercase', () => {
-    expect(koszones("Sam, DAVE, Bob, FERENC")).toBe("Hello, Sam and Bob. AND HELLO DAVE AND FERENC");
+    expect(koszones("Sam, DAVE, Bob, FERENC")).toBe("Hello, Sam and Bob. AND HELLO, DAVE AND FERENC!");
   });
