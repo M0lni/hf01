@@ -5,6 +5,8 @@
  */
   // csak tesztelgetem a githubot
 
+const { showHelpOnFail, array } = require("yargs");
+
   
  /*  const readline = require('readline');
 
@@ -19,11 +21,21 @@ rl.question('What do you think of Node.js? ', (answer) => {
 }); */
 
  function koszones(emberek){
+    let darabolt=emberek.split(", ");
     if(emberek==""){
     return "Hello, my friend";
     }
     if(emberek==emberek.toUpperCase()){
-        return "HELLO, "+emberek+"!";
+    return "HELLO, "+emberek+"!";
+    }
+    if(darabolt.length>1){
+        let returnstring="";
+        let index;
+        for ( index = 0; index < darabolt.length-1; index++) {
+             returnstring+=", "+darabolt[index];
+            
+        }
+    return "Hello"+returnstring+" and "+darabolt[index];
     }
 
     return "Hello, "+emberek;
@@ -37,6 +49,7 @@ module.exports = koszones;
 function nevek() {
     let emberek = prompt();
     let text;
+    
     text=koszones(emberek);
     document.getElementById("demo").innerHTML = text;
     
