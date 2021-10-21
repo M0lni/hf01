@@ -38,7 +38,6 @@ function nevek() {
     let emberek = prompt();
     let text;
     text=koszones(emberek);
-
     document.getElementById("demo").innerHTML = text;
     
   }
