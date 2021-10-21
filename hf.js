@@ -22,6 +22,9 @@ rl.question('What do you think of Node.js? ', (answer) => {
     if(emberek==""){
     return "Hello, my friend";
     }
+
+
+    return "Hello, "+emberek;
     
 
 }
