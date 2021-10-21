@@ -9,3 +9,7 @@ const koszones=require('./hf');
 test('Tests for no input', () => {
     expect(koszones("")).toBe("Hello, my friend");
   });
+
+test('Tests for 1 input', () => {
+    expect(koszones("Fred")).toBe("Hello, Fred");
+  });
