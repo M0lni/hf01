@@ -26,3 +26,6 @@ test('Tests for multiple names that can be uppercase', () => {
 test('Tests for multiple uppercase names', () => {
     expect(koszones("DAVE, FERENC")).toBe("HELLO, DAVE AND FERENC!");
   });
+test('Tests for multiple lowercase but only one uppercase', () => {
+    expect(koszones("DAVE, Bob, FERENC")).toBe("Hello, Bob. AND HELLO, DAVE AND FERENC!");
+  });
