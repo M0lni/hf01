@@ -67,7 +67,7 @@ rl.question('What do you think of Node.js? ', (answer) => {
     return "HELLO"+nagyreturn+" AND "+nagy[nagy.length-1]+"!"
    }
    else if(nagy.length==1 && kis.length>=2){
-    return "Hello"+kisreturn+" and "+kis[kis.length-1]+". AND HELLO"+nagy[nagy.length-1]+"!"
+    return "Hello"+kisreturn+" and "+kis[kis.length-1]+". AND HELLO, "+nagy[nagy.length-1]+"!"
    }
         return "Hello"+kisreturn+" and "+kis[kis.length-1]+". AND HELLO"+nagyreturn+" AND "+nagy[nagy.length-1]+"!"
     }
