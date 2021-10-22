@@ -20,6 +20,9 @@ test('Tests for shouting', () => {
 test('Tests for multiple names', () => {
     expect(koszones("Sam, Dave, Bob")).toBe("Hello, Sam, Dave and Bob.");
   });
-  test('Tests for multiple names that can be uppercase', () => {
+test('Tests for multiple names that can be uppercase', () => {
     expect(koszones("Sam, DAVE, Bob, FERENC")).toBe("Hello, Sam and Bob. AND HELLO, DAVE AND FERENC!");
+  });
+test('Tests for multiple uppercase names', () => {
+    expect(koszones("DAVE, FERENC")).toBe("HELLO, DAVE AND FERENC!");
   });
