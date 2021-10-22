@@ -25,9 +25,9 @@ rl.question('What do you think of Node.js? ', (answer) => {
     if(emberek==""){
     return "Hello, my friend.";
     }
-    if(emberek==emberek.toUpperCase()){
-    return "HELLO, "+emberek+"!";
-    }
+    if(emberek==emberek.toUpperCase() && darabolt.length==1){
+      return "HELLO, "+emberek+"!";
+      }
     let feltetel=0;
     for(let k=0;k<darabolt.length;k++){
         if(darabolt[k]==darabolt[k].toUpperCase())
@@ -59,6 +59,15 @@ rl.question('What do you think of Node.js? ', (answer) => {
        for ( index = 0; index < nagy.length-1; index++) {
         nagyreturn+=", "+nagy[index];
        
+   }
+   if(kis.length==1 && nagy.length>=2){
+    return "Hello"+kis[kis.length-1]+". AND HELLO"+nagyreturn+" AND "+nagy[nagy.length-1]+"!"
+   }
+   else if(kis.length==0){
+    return "HELLO"+nagyreturn+" AND "+nagy[nagy.length-1]+"!"
+   }
+   else if(nagy.length==1 && kis.length>=2){
+    return "Hello"+kisreturn+" and "+kis[kis.length-1]+". AND HELLO"+nagy[nagy.length-1]+"!"
    }
         return "Hello"+kisreturn+" and "+kis[kis.length-1]+". AND HELLO"+nagyreturn+" AND "+nagy[nagy.length-1]+"!"
     }
