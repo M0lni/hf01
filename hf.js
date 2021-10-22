@@ -1,39 +1,20 @@
-/* function sum(a, b) {
-    return a + b;
-  }
-  module.exports = sum;
- */
-  // csak tesztelgetem a githubot
 
 const { showHelpOnFail, array } = require("yargs");
 
-  
- /*  const readline = require('readline');
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-rl.question('What do you think of Node.js? ', (answer) => {
-  console.log(`Thank you for your valuable feedback: ${answer}`);
-  rl.close();
-}); */
-
- function koszones(emberek){
+ function koszones(emberek){  
     let darabolt=emberek.split(", ");
-    if(emberek==""){
+    if(emberek==""){      //üres
     return "Hello, my friend.";
     }
-    if(emberek==emberek.toUpperCase() && darabolt.length==1){
+    if(emberek==emberek.toUpperCase() && darabolt.length==1){  //1 db uppercase
       return "HELLO, "+emberek+"!";
       }
     let feltetel=0;
-    for(let k=0;k<darabolt.length;k++){
+    for(let k=0;k<darabolt.length;k++){  //ellenőrzés h van e benne ordibálás
         if(darabolt[k]==darabolt[k].toUpperCase())
         feltetel++;
     }
-    if(darabolt.length>1 &&  feltetel>0) {
+    if(darabolt.length>1 &&  feltetel>0) {  //többelemű akár kis, akaár nagybetűs elemekkel
         
         let kis=[];
         let nagy=[];
@@ -43,7 +24,7 @@ rl.question('What do you think of Node.js? ', (answer) => {
         let kisreturn="";
         let nagyreturn="";
         for ( index = 0; index < darabolt.length; index++) {
-            if(darabolt[index]==darabolt[index].toUpperCase()){
+            if(darabolt[index]==darabolt[index].toUpperCase()){        //nagy és kisbetűs nevek elválasztása
                 nagy[i]=darabolt[index];
                 i++;
             }
@@ -60,18 +41,18 @@ rl.question('What do you think of Node.js? ', (answer) => {
         nagyreturn+=", "+nagy[index];
        
    }
-   if(kis.length==1 && nagy.length>=2){
+   if(kis.length==1 && nagy.length>=2){  //1db kis, és bármennyi nagy
     return "Hello, "+kis[kis.length-1]+". AND HELLO"+nagyreturn+" AND "+nagy[nagy.length-1]+"!"
    }
-   else if(kis.length==0){
+   else if(kis.length==0){ //0db kis és bármennyi nagy
     return "HELLO"+nagyreturn+" AND "+nagy[nagy.length-1]+"!"
    }
-   else if(nagy.length==1 && kis.length>=2){
+   else if(nagy.length==1 && kis.length>=2){   //bármennyi kis és 1db nagy
     return "Hello"+kisreturn+" and "+kis[kis.length-1]+". AND HELLO, "+nagy[nagy.length-1]+"!"
    }
-        return "Hello"+kisreturn+" and "+kis[kis.length-1]+". AND HELLO"+nagyreturn+" AND "+nagy[nagy.length-1]+"!"
+        return "Hello"+kisreturn+" and "+kis[kis.length-1]+". AND HELLO"+nagyreturn+" AND "+nagy[nagy.length-1]+"!" //bármennyi nagy és kis
     }
-    if(darabolt.length>1){
+    if(darabolt.length>1){ //többelemű, csak kisnevekkel
         let returnstring="";
         let index;
         for ( index = 0; index < darabolt.length-1; index++) {
@@ -81,7 +62,7 @@ rl.question('What do you think of Node.js? ', (answer) => {
     return "Hello"+returnstring+" and "+darabolt[index]+".";
     }
 
-    return "Hello, "+emberek+".";
+    return "Hello, "+emberek+".";  //1db kis név
     
 
 }
@@ -98,10 +79,3 @@ function nevek() {
     
   }
  
-  
- /*  if (person == null || person == "") {
-    text = "Hello, my friend";
-  } else {
-    text = "Hello " + person + "! How are you today?";
-  }
-  document.getElementById("demo").innerHTML = text; */

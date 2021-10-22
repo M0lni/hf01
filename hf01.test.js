@@ -27,7 +27,7 @@ test('Tests for multiple uppercase names', () => {
     expect(koszones("DAVE, FERENC")).toBe("HELLO, DAVE AND FERENC!");
   });
 test('Tests for multiple lowercase but only one uppercase', () => {
-    expect(koszones("Dave, Bob, FERENC")).toBe("Hello, Dave and Bob. AND HELLO, FERENC!");
+    expect(koszones("Dave, Bob, FERENC")).toBe("Hello, Dave and Bob. AND HELLO, FERENC!"); //az utolsó 3 esetet extrém eseteknek vettem, és egymás után kódoltam le őket, mert nem akartam elveszni
   });
 test('Tests for multiple uppercase but only one lowercase', () => {
     expect(koszones("DAVE, Bob, FERENC")).toBe("Hello, Bob. AND HELLO, DAVE AND FERENC!");
